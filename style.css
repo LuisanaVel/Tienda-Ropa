@@ -178,6 +178,7 @@ th, td {
     flex-basis: calc(33.3% - 15px);
     background-color: var(--bg-principal);
     padding: 35px;
+    box-shadow: 0 0 5px;
 }
 
 .ofert-img {
@@ -211,3 +212,52 @@ th, td {
     font-size: 15px;
 }
 
+/* Main */
+.products {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.products h2 {
+    color: var(--negro);
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.product-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.product {
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 0 20px; /* rgba(0, 0, 0, 0.1) le da sombra a nuestra caja */
+}
+
+.product img {
+    width: 250px;
+    height: 370px;
+    margin-bottom: 20px;
+}
+
+.product h3 {
+    font-size: 20px;
+    color: var(--negro);
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.product p, .precio {
+    font-size: 16px;
+    color: var(--negro);
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-weight: 800;
+}
