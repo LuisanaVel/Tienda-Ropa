@@ -9,6 +9,7 @@ font-family: 'Poppins', sans-serif;
     --negro: #111;
     --bg-transparent: #4e4b5076;
     --blanco: #fff;
+    --grisClaro: #dcdcdc;
 }
 
 * {
@@ -316,4 +317,30 @@ th, td {
 .blog-1 p {
     font-size: 16px;
     color: var(--negro);
+}
+
+/* Footer */
+.footer {
+    padding: 50px 0;
+    background-color: var(--negro);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link h3 {
+    font-size: 18px;
+    color: var(--blanco);
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.link a {
+    font-size: 16px;
+    color: var(--grisClaro);
+    display: block;
+    margin-bottom: 10px;
 }
