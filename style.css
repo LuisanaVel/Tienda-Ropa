@@ -261,3 +261,31 @@ th, td {
 .precio {
     font-weight: 800;
 }
+
+/* Seccion 2 icons */
+.icons {
+    padding: 50px 0 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-1 {
+    flex-basis: calc(33.3% - 30px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: var(--bg-principal);
+}
+
+.icon-txt h3 {
+    font-size: 20px;
+    color: var(--negro);
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.icon-txt p {
+    font-size: 16px;
+    color: var(--negro);
+}
