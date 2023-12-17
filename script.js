@@ -18,7 +18,7 @@ function comprarElemento(e) {
         const elemento = e.target.parentElement.parentElement;
         leerDatosElemento(elemento);
     }
-
+}
 
 function leerDatosElemento(elemento) {
     const infoElemento = {
