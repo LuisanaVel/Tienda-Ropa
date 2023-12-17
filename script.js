@@ -7,16 +7,17 @@ cargarEventListeners();
 
 function cargarEventListeners() {
 
-    elementos1.addEventListener('click, comprarElemento');
-    carrito.addEventListener('click, eliminarElemento');
-    vaciarCarritoBtn.addEventListener('click, vaciarCarrito');
+    elementos1.addEventListener('click', comprarElemento);
+    carrito.addEventListener('click', eliminarElemento);
+    vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
 }
 
 function comprarElemento(e) {
     e.preventDefault();
     if(e.target.classList.contains('agregar-carrito')) {
         const elemento = e.target.parentElement.parentElement;
-        leerDatosElemento(elemento);
+        const datosElemento = leerDatosElemento(elemento);
+        carrito.push(datosElemento);
     }
 }
 
@@ -25,9 +26,9 @@ function leerDatosElemento(elemento) {
         imagen: elemento.querySelector('img').src,
         titulo: elemento.querySelector('h3').textContent,
         precio: elemento.querySelector('.precio').textContent,
-        id: elemento.querySelector('a').getAtribute('data-id')
+        id: elemento.querySelector('a').getAttribute('data-id')
     }
-    insertarCarrito(infoElemento);
+    return(infoElemento);
 }
 
 function insertarCarrito(elemento) {
@@ -57,7 +58,7 @@ function eliminarElemento(e) {
     if(e.target.classList.contains('borrar')) {
         e.target.parentElement.parentElement.remove();
         elemento = e.target.parentElement.parentElement;
-        elementoId = elemento.querySelector('a').getAtribute('data-id');
+        elementoId = elemento.querySelector('a').getAttribute('data-id');
     }
 }
 
