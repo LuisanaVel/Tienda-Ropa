@@ -16,10 +16,9 @@ function comprarElemento(e) {
     e.preventDefault();
     if(e.target.classList.contains('agregar-carrito')) {
         const elemento = e.target.parentElement.parentElement;
-        const datosElemento = leerDatosElemento(elemento);
-        carrito.push(datosElemento);
+        leerDatosElemento(elemento);
     }
-}
+
 
 function leerDatosElemento(elemento) {
     const infoElemento = {
@@ -28,7 +27,7 @@ function leerDatosElemento(elemento) {
         precio: elemento.querySelector('.precio').textContent,
         id: elemento.querySelector('a').getAttribute('data-id')
     }
-    return(infoElemento);
+    insertarCarrito(infoElemento);
 }
 
 function insertarCarrito(elemento) {
@@ -67,4 +66,4 @@ function vaciarCarrito() {
         lista.removeChild(lista.firstChild);
     }
     return false;
-}
+};
