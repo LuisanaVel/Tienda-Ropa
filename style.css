@@ -331,6 +331,11 @@ th, td {
     justify-content: space-between;
 }
 
+.link h2 {
+    font-size: 30px;
+    color: var(--blanco);
+}
+
 .link h3 {
     font-size: 18px;
     color: var(--blanco);
@@ -344,6 +349,11 @@ th, td {
     color: var(--grisClaro);
     display: block;
     margin-bottom: 10px;
+}
+
+.link i {
+    color: var(--blanco);
+    font-family: 'Oswald', sans-serif;
 }
 
 /* Responsive */
